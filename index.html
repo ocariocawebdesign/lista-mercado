@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <title>Lista de Mercado</title>
+  </head>
+  <body>
+    <style>
+      #app {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 5rem;
+        justify-content: center;
+        align-items: center;
+      }
+
+      li {
+        list-style: outside;
+      }
+
+      .bolder-uppercase {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      #box01 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #dddada;
+        border-radius: 3px;
+        background-color: #fafafa;
+        padding: 2.5rem;
+      }
+    </style>
+
+    <div id="app">
+      <div class="container">
+        <div class="row">
+          <div id="box01" class="columns">
+            <span class="bolder-uppercase">Lista de Mercado</span>
+            <ul id="listaTarefas"></ul>
+            <!--<select name="marcas" id="marcas">
+              <option value="Boss">Boss</option>
+              <option value="Digitech">Digitech</option>
+              <option value="Mooer">Mooer</option>
+              <option value="Ibanez">Ibanez</option>
+              <option value="Marshall">Marshall</option>
+              <option value="Fender">Fender</option>
+            </select>-->
+            <input id="inputTarefa" type="text" placeholder="Digite a tarefa" />
+            <button id="button01" type="button">Adicionar</button>
+            <div id="resultado"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="array.js"></script>
+    <!-- <script src="teste.js"></script>-->
+  </body>
+</html>
