@@ -23,13 +23,15 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 5rem;
+        padding: 4rem;
         justify-content: center;
         align-items: center;
       }
 
       li {
         list-style: outside;
+        font-size: 18px;
+        font-weight: normal;
       }
 
       .bolder-uppercase {
@@ -37,8 +39,18 @@
         text-transform: uppercase;
       }
 
+      #box-principal {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        gap: 10px;
+        grid-template-rows: auto;
+        padding: 0.8rem;
+        border: #dddada 1px solid;
+      }
+
       #box01 {
         display: flex;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -47,11 +59,60 @@
         background-color: #fafafa;
         padding: 2.5rem;
       }
+
+      #box02 {
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+        padding: 0.8rem;
+        border: 1px solid #dddada;
+        border-radius: 3px;
+      }
+      img-border {
+        width: 100%;
+
+        border: 2px solid #dadada;
+        border-radius: 3px;
+      }
+
+      #resultato {
+        width: 50%;
+        height: auto;
+        border: 1px solid#dddada;
+      }
+
+      @media (min-width: 360px) and (max-width: 740px) {
+        #box-principal {
+          display: block !important;
+          grid-template-columns: 80% 20%;
+         
+          padding: 0.8rem;
+          border: #dddada 1px solid;
+        }
+
+        #box02 {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+        margin-top:1rem;
+        
+        border: 1px solid #dddada;
+        border-radius: 3px;
+      }
+
+
+      }
     </style>
 
     <div id="app">
       <div class="container">
-        <div class="row">
+        <div id="box-principal" class="">
           <div id="box01" class="columns">
             <span class="bolder-uppercase">Lista de Mercado</span>
             <ul id="listaTarefas"></ul>
@@ -65,7 +126,15 @@
             </select>-->
             <input id="inputTarefa" type="text" placeholder="Digite o item" />
             <button id="button01" type="button">Adicionar</button>
-            <div id="resultado"></div>
+          </div>
+
+          <!--Box02-->
+
+          <div id="box02" class="columns">
+            <img class="img-border" src="img/benchmark.jpg" alt="" />
+            <span class="bolder-uppercase"></span>
+            <!--<div id="resultado"></div>
+            <button id="button02" type="button">Copiar</button>-->
           </div>
         </div>
       </div>

@@ -76,6 +76,10 @@ marcasArray.forEach((item, index, array) =>{
 const listaTarefas = document.querySelector("#listaTarefas");
 const inputTarefas = document.querySelector("#inputTarefa");
 const button01 = document.querySelector("#button01");
+const button02 = document.querySelector("#button02");
+const resultado = document.querySelector("#resultado");
+
+
 
 let tarefas = JSON.parse(localStorage.getItem("lista_tarefas")) || [];
 
@@ -118,6 +122,8 @@ function deleteTarefas(posicao) {
   salvarStorage();
 }
 
+
 function salvarStorage() {
   localStorage.setItem("lista_tarefas", JSON.stringify(tarefas));
 }
+
